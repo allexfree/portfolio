@@ -1,0 +1,42 @@
+@import "vars"
+
+html
+  height: 100%
+
+body
+  position: relative
+
+  box-sizing: border-box
+  min-width: 320px
+  max-width: 970px
+  margin: 0 auto
+
+  font-size: 14px
+  line-height: 1.6
+  font-family: $font-one
+  color: #ffffff
+  word-wrap: break-word
+
+img
+  max-width: 100%
+  height: auto
+
+iframe
+  border: none
+
+.visually-hidden,
+.visually-hidden:not(:focus):not(:active)
+  position: absolute
+
+  width: 1px
+  height: 1px
+  margin: -1px
+
+  clip: rect(0 0 0 0)
+
+.hidden
+  display: none
+
+.modal-open
+  height: 100vh
+  overflow: hidden
