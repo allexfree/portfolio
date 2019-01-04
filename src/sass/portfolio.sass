@@ -1,0 +1,113 @@
+@import "vars"
+
+.portfolio
+  display: block
+  box-sizing: border-box
+
+.portfolio__wrapper
+  position: relative
+  display: flex
+  flex-direction: column
+  justify-content: center
+  padding-top: 20px
+  box-sizing: border-box
+
+.portfolio__title
+  position: relative
+  display: flex
+  align-self: center
+  margin-bottom: 75px
+  font-weight: 600
+  line-height: 24px
+  text-align: center
+  color: #000000
+  &::after
+    +pseudo
+    top: -17px
+    left: -69px
+    width: 244px
+    height: 47px
+    background-image: url("../img/portfolio-title-bg.png")
+    background-repeat: no-repeat
+    background-size: cover
+
+.portfolio__slider
+  position: relative
+
+.portfolio__slide-block
+  position: absolute
+  top: 0
+  left: 0
+  padding: 15px
+  display: none
+  box-sizing: border-box
+
+.portfolio__slide
+  position: relative
+  width: 250px
+  height: 158px
+  &:hover,
+  &:focus
+    .portfolio__slide-block
+      display: flex
+      justify-content: center
+      align-items: center
+      width: 100%
+      height: 100%
+      background-color: rgba(0, 0, 0, 0.5)
+
+.portfolio__slide-link
+  display: block
+  width: 35px
+  height: 35px
+  background-image: url("../img/link.svg")
+  background-repeat: no-repeat
+  background-size: cover
+
+.portfolio__pagination
+  display: flex
+  justify-content: center
+  padding: 25px 0 0 0
+  margin-bottom: 35px
+  list-style: none
+  li
+    margin-right: 20px
+    &:last-child
+      margin-right: 0
+
+    &.slick-active
+      button
+        background-color: #b1ffd5
+
+  button
+    display: block
+    width: 10px
+    height: 10px
+    padding: 0
+    font-size: 0
+    background-color: transparent
+    border: 1px solid #b1ffd5
+    border-radius: 50%
+    cursor: pointer
+    box-sizing: border-box
+
+.portfolio__link
+  display: flex
+  justify-content: center
+  align-items: center
+  align-self: center
+  width: 170px
+  padding: 10px 0
+  margin-bottom: 35px
+  font-weight: 600
+  line-height: 24px
+  color: #111111
+  text-transform: uppercase
+  text-decoration: none
+  border: 1px solid #b2ffd6
+  border-radius: 20px
+  transition: all 0.3s
+  box-sizing: border-box
+  &:hover,
+  &:active
+    background-color: #b2ffd6

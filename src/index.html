@@ -30,11 +30,12 @@
       </nav>
     </div>
     <div class="page-header__content">
-      <h1 class="page-header__title">Hello, my name is Alex and this is my portfolio</h1>
+      <h1 class="page-header__title">Hello, i'm Alex and this is my portfolio</h1>
       <a class="page-header__link" href="contacts.html">Hire me</a>
       <ul class="page-header__social">
         <li class="page-header__social-item">
-          <a class="page-header__social-link" href="https://www.facebook.com/profile.php?id=100011764658544" target="_blank" aria-label="Open my page on facebook">
+          <a class="page-header__social-link" href="https://www.facebook.com/profile.php?id=100011764658544" target="_blank"
+            aria-label="Open my page on facebook">
             <svg class="icon-fb" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 49.7 49.7" width="35" height="35" fill="#ffffff">
               <g>
                 <g>
@@ -86,6 +87,37 @@
       </ul>
     </div>
   </header>
+  <main class="page-main">
+    <section id="portfolio" class="portfolio">
+      <div class="portfolio__wrapper">
+        <h1 class="portfolio__title">Portfolio</h1>
+        <div class="portfolio__slider">
+          <div class="portfolio__slide">
+            <img class="portfolio__slide-img" src="img/project-1@x1.jpg" srcset="img/project-1@x2.jpg 2x" width="250"
+              height="158" alt="Alt">
+            <div class="portfolio__slide-block">
+              <a class="portfolio__slide-link" href="http://test.online4free.ru/layout/miushi/" target="_blank" aria-label="View project"></a>
+            </div>
+          </div>
+          <div class="portfolio__slide">
+            <img class="portfolio__slide-img" src="img/project-2@x1.jpg" srcset="img/project-2@x2.jpg 2x" width="250"
+              height="158" alt="Alt">
+            <div class="portfolio__slide-block">
+              <a class="portfolio__slide-link" href="#" target="_blank" aria-label="View project"></a>
+            </div>
+          </div>
+          <div class="portfolio__slide">
+            <img class="portfolio__slide-img" src="img/project-3@x1.jpg" srcset="img/project-3@x2.jpg 2x" width="250"
+              height="158" alt="Alt">
+            <div class="portfolio__slide-block">
+              <a class="portfolio__slide-link" href="#" target="_blank" aria-label="View project"></a>
+            </div>
+          </div>
+        </div>
+        <a class="portfolio__link" href="projects.html">View other</a>
+      </div>
+    </section>
+  </main>
   <br>
   <br>
   <br>
@@ -136,8 +168,12 @@
   <br>
   <br>
   <br>
+  <link rel="stylesheet" href="libs//slick-1.8.1/slick/slick.css">
+  <link rel="stylesheet" href="libs/slick-1.8.1/slick/slick-theme.css">
   <link rel="stylesheet" href="css/style.min.css">
 
+  <script src="libs/jquery/jquery-3.3.1.js"></script>
+  <script src="libs/slick-1.8.1/slick/slick.min.js"></script>
   <script src="js/common.js"></script>
 </body>
 
