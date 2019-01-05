@@ -1,0 +1,55 @@
+@import "vars"
+
+.page-footer
+  display: flex
+  flex-direction: column
+  background-color: #020202
+  box-sizing: border-box
+
+.page-footer__wrapper
+  display: flex
+  flex-direction: column
+  padding: 30px 15px 15px
+
+.page-footer__social
+  display: flex
+  align-self: center
+  margin: 0
+  margin-bottom: 45px
+  padding: 0
+  list-style: none
+
+.page-footer__social-item
+  display: block
+  width: 35px
+  height: 35px
+  margin-right: 25px
+  &:last-child
+    margin-right: 0
+
+.page-footer__social-link
+  display: block
+  height: 100%
+  outline: none
+  svg
+    transition: all 0.3s
+
+  &:hover,
+  &:focus
+    svg
+      fill: #b1ffd5
+
+.page-footer__bottomline
+  display: flex
+  justify-content: space-between
+
+.page-footer__copyright,
+.page-footer__developer
+  margin: 0
+  font-weight: 600
+  line-height: 24px
+  color: rgba(255, 255, 255, 0.2)
+
+.page-footer__developer
+  a
+    color: rgba(255, 255, 255, 0.2)
