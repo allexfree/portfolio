@@ -91,9 +91,10 @@
     <section id="portfolio" class="portfolio">
       <div class="portfolio__wrapper">
         <h1 class="portfolio__title">Portfolio</h1>
+        <p class="portfolio__text">My last works</p>
         <div class="portfolio__slider">
           <div class="portfolio__slide">
-            <img class="portfolio__slide-img" src="img/project-1@x1.jpg" srcset="img/project-1@x2.jpg 2x" width="250"
+            <img class="portfolio__slide-img" src="img/project-1@x1.png" srcset="img/project-1@x2.png 2x" width="250"
               height="158" alt="Miushi - psd layout">
             <div class="portfolio__slide-block">
               <a class="portfolio__slide-link" href="http://test.online4free.ru/layout/miushi/" target="_blank"
@@ -101,17 +102,32 @@
             </div>
           </div>
           <div class="portfolio__slide">
-            <img class="portfolio__slide-img" src="img/project-2@x1.jpg" srcset="img/project-2@x2.jpg 2x" width="250"
+            <img class="portfolio__slide-img" src="img/project-2@x1.png" srcset="img/project-2@x2.png 2x" width="250"
               height="158" alt="Kessound - online store of acoustics">
             <div class="portfolio__slide-block">
               <a class="portfolio__slide-link" href="#" target="_blank" aria-label="View project"></a>
             </div>
           </div>
           <div class="portfolio__slide">
-            <img class="portfolio__slide-img" src="img/project-3@x1.jpg" srcset="img/project-3@x2.jpg 2x" width="250"
+            <img class="portfolio__slide-img" src="img/project-3@x1.png" srcset="img/project-3@x2.png 2x" width="250"
               height="158" alt="boss78 - online store of mobile phone Apple">
             <div class="portfolio__slide-block">
-              <a class="portfolio__slide-link" href="#" target="_blank" aria-label="View project"></a>
+              <a class="portfolio__slide-link" href="https://boss78.ru" target="_blank" aria-label="View project"></a>
+            </div>
+          </div>
+          <div class="portfolio__slide">
+            <img class="portfolio__slide-img" src="img/project-4@x1.png" srcset="img/project-4@x2.png 2x" width="250"
+              height="158" alt="Zet - psd layout">
+            <div class="portfolio__slide-block">
+              <a class="portfolio__slide-link" href="http://test.online4free.ru/layout/zet/" target="_blank" aria-label="View project"></a>
+            </div>
+          </div>
+          <div class="portfolio__slide">
+            <img class="portfolio__slide-img" src="img/project-5@x1.png" srcset="img/project-5@x2.png 2x" width="250"
+              height="158" alt="Device - graduation project from HTML academy">
+            <div class="portfolio__slide-block">
+              <a class="portfolio__slide-link" href="http://test.online4free.ru/device/index.html" target="_blank"
+                aria-label="View project"></a>
             </div>
           </div>
         </div>
@@ -121,25 +137,26 @@
     <section id="about" class="about">
       <div class="about__wrapper">
         <h2 class="about__title">About me</h2>
+        <p class="about__text">My skills and abilities</p>
         <div class="about__content">
           <div class="about__content-info">
             <h3 class="about__content-title">My skills</h3>
             <div class="about__content-main">
               <div class="about__content-item">
                 <p class="about__content-text">Html</p>
-                <div class="about__content-line"></div>
+                <div class="about__content-line" data-final-value="90"></div>
               </div>
               <div class="about__content-item">
                 <p class="about__content-text">Css</p>
-                <div class="about__content-line"></div>
+                <div class="about__content-line" data-final-value="75"></div>
               </div>
               <div class="about__content-item">
                 <p class="about__content-text">Js</p>
-                <div class="about__content-line"></div>
+                <div class="about__content-line" data-final-value="30"></div>
               </div>
               <div class="about__content-item">
                 <p class="about__content-text">Graphic editors</p>
-                <div class="about__content-line"></div>
+                <div class="about__content-line" data-final-value="50"></div>
               </div>
             </div>
           </div>
@@ -153,29 +170,35 @@
     <section id="contacts" class="contacts">
       <div class="contacts__wrapper">
         <h2 class="contacts__title">Contacts</h2>
-        <div class="contacts__info">
-          <div class="contacts__info-item">
-            <p class="contacts__info-text">Email</p>
-            <a class="contacts__info-link" href="mailto:allexfree@yandex.ru" aria-label="My email">allexfree@yandex.ru</a>
-          </div>
-          <div class="contacts__info-item">
-            <p class="contacts__info-text">Phone</p>
-            <a class="contacts__info-link" href="tel:+79967865245" aria-label="My phone number">+7 996 7865245</a>
-          </div>
-        </div>
-        <form class="contacts__form" action="#" method="POST">
-          <fieldset class="contacts__form-group">
-            <div class="contacts__form-wrapper">
-              <p class="contacts__form-title">Write to me please</p>
-              <input type="text" class="contacts__form-input" name="user-name" placeholder="your name">
-              <input type="email" class="contacts__form-input" name="user-mail" placeholder="your email" pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}"
-                required>
-              <input type="tel" class="contacts__form-input" name="user-phone" placeholder="your phone" pattern="(\+?\d[- .]*){7,13}"
-                required>
+        <p class="contacts__text">My email and phone number</p>
+        <div class="contacts__content">
+          <div class="contacts__info">
+            <div class="contacts__info-item">
+              <p class="contacts__info-text">Email</p>
+              <a class="contacts__info-link" href="mailto:allexfree@yandex.ru" aria-label="My email">allexfree@yandex.ru</a>
             </div>
-          </fieldset>
-          <button class="contacts__form-btn" type="submit">Send</button>
-        </form>
+            <div class="contacts__info-item">
+              <p class="contacts__info-text">Phone</p>
+              <a class="contacts__info-link" href="tel:+79967865245" aria-label="My phone number">+7 996 7865245</a>
+            </div>
+          </div>
+          <form class="contacts__form" action="#" method="POST">
+            <fieldset class="contacts__form-group">
+              <div class="contacts__form-wrapper">
+                <p class="contacts__form-title">Write to me please</p>
+                <input type="hidden" name="project_name" value="My portfolio">
+                <input type="hidden" name="admin_email" value="allexfree@yandex.ru">
+                <input type="hidden" name="form_subject" value="Сообщение с сайта 'My portfolio'">
+                <input type="text" class="contacts__form-input" name="user-name" placeholder="your name">
+                <input type="email" class="contacts__form-input" name="user-mail" placeholder="your email" pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}"
+                  required>
+                <input type="tel" class="contacts__form-input" name="user-phone" placeholder="your phone" pattern="(\+?\d[- .]*){7,13}"
+                  required>
+              </div>
+            </fieldset>
+            <button class="contacts__form-btn" type="submit">Send</button>
+          </form>
+        </div>
       </div>
     </section>
   </main>
@@ -240,12 +263,11 @@
       </div>
     </div>
   </footer>
-  <link rel="stylesheet" href="libs//slick-1.8.1/slick/slick.css">
-  <link rel="stylesheet" href="libs/slick-1.8.1/slick/slick-theme.css">
+
+  <link rel="stylesheet" href="libs/libs.min.css">
   <link rel="stylesheet" href="css/style.min.css">
 
-  <script src="libs/jquery/jquery-3.3.1.js"></script>
-  <script src="libs/slick-1.8.1/slick/slick.min.js"></script>
+  <script src="libs/libs.min.js"></script>
   <script src="js/common.js"></script>
 </body>
 

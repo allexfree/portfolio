@@ -16,9 +16,10 @@ var gulp = require('gulp'),
     svgo = require('gulp-svgo'),
     pngmin = require('gulp-pngquant'),
     uglify = require('gulp-uglify'),
+    del = require('del'),
     browserSync = require('browser-sync').create();
 
-gulp.task('serve', ['jpgmin', 'pngmin', 'svgo', /*'jsLibsMin', 'cssLibsMin', 'style',*/ 'watch'], function() {
+gulp.task('serve', ['jpgmin', 'pngmin', 'svgo', 'jsLibsMin', 'cssLibsMin', 'style', 'watch'], function() {
   browserSync.init({
     server: 'src/'
   })
@@ -52,23 +53,22 @@ gulp.task('svgo', function() {
 
 gulp.task('cssLibsMin', function() {
   return gulp.src([
-    'src/libs/slick-1.8.1/slick/slick.scss',
-    'src/libs/slick-1.8.1/slick/slick-theme.scss'
+    'src/libs/**/**/{*.scss, *.sass}'
   ])
     .pipe(sass())
-    .pipe(postcss([prefixer]))
-    .pipe(rename('libs.css'))
-    .pipe(gulp.dest('src/libs/'))
+    .pipe(postcss([prefixer, cssnano]))
+    .pipe(rename('libs.min.css'))
+    .pipe(gulp.dest('src/libs'))
 })
 
 gulp.task('jsLibsMin', function() {
   return gulp.src([
     'src/libs/jquery/jquery-3.3.1.js',
-    'src/libs/slick-1.8.1/slick/slick.min.js'
+    'src/libs/slick-1.8.1/slick/slick.js'
   ])
     .pipe(concat('libs.min.js'))
     .pipe(uglify())
-    .pipe(gulp.dest('src/libs/'));
+    .pipe(gulp.dest('src/libs'));
 });
 
 gulp.task('style', function() {
@@ -91,5 +91,18 @@ gulp.task('watch', function() {
   gulp.watch('src/*.html').on('change', browserSync.reload);
   gulp.watch('src/js/*.js').on('change', browserSync.reload);
 });
+
+gulp.task('clean', function() {
+  return del.sync('build');
+});
+
+gulp.task('img', function() {
+  return gulp.src('src/img/**/*')
+  .pipe(gulp.dest('build/img'));
+});
+
+gulp.task('build', [
+
+]);
 
 gulp.task('default', ['serve']);

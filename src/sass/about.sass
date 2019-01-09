@@ -21,7 +21,7 @@
   position: relative
   display: flex
   align-self: center
-  margin-bottom: 75px
+  //margin-bottom: 75px
   font-size: 24px
   font-weight: 600
   line-height: 24px
@@ -35,6 +35,20 @@
     background-image: url("../img/about-title-bg.png")
     background-repeat: no-repeat
     background-size: cover
+
+@media (min-device-pixel-ratio: 1.5), (min-resolution: 1.5dppx), (min-resolution: 144dpi)
+  .about__title
+    background-image: url("../img/about-title-bg@x2.png")
+
+.about__text
+  margin-top: 0
+  margin-bottom: 75px
+  align-self: center
+  font-size: 12px
+  letter-spacing: 0.6em
+  color: #ffffff
+  text-align: center
+  text-transform: uppercase
 
 .about__content
   display: flex
@@ -71,10 +85,14 @@
 .about__content-line
   position: relative
   display: flex
+  justify-content: center
+  align-items: center
   width: 100%
   height: 3px
   border-radius: 1.5px
   background-color: #fafafa
+  font-size: 0
+  color: #111111
   &::before
     +pseudo
     height: 3px
@@ -153,3 +171,121 @@
   &:focus
     border: 1px solid transparent
     background-color: #9dffcb
+
+@media (min-width: 480px)
+  .about
+    background-image: url("../img/about-bg@480x1.jpg")
+
+  @media (min-device-pixel-ratio: 1.5), (min-resolution: 1.5dppx), (min-resolution: 144dpi)
+    .about
+      background-image: url("../img/about-bg@480x2.jpg")
+
+  .about__content-info
+    align-self: center
+    width: 450px
+    box-sizing: border-box
+
+@media (min-width: 600px)
+  .about
+    background-image: url("../img/about-bg@600x1.jpg")
+
+  @media (min-device-pixel-ratio: 1.5), (min-resolution: 1.5dppx), (min-resolution: 144dpi)
+    .about
+      background-image: url("../img/about-bg@600x2.jpg")
+
+@media (min-width: 750px)
+  .about
+    background-image: url("../img/about-bg@750x1.jpg")
+
+  @media (min-device-pixel-ratio: 1.5), (min-resolution: 1.5dppx), (min-resolution: 144dpi)
+    .about
+      background-image: url("../img/about-bg@750x2.jpg")
+
+  .about__content-paragraph
+    font-size: 16px
+    text-align: center
+
+@media (min-width: 970px)
+  .about
+    background-image: url("../img/about-bg@970x1.jpg")
+
+  @media (min-device-pixel-ratio: 1.5), (min-resolution: 1.5dppx), (min-resolution: 144dpi)
+    .about
+      background-image: url("../img/about-bg@970x2.jpg")
+
+  .about__content-info
+    width: 840px
+    padding: 30px
+
+  .about__content-title
+    font-size: 18px
+
+  .about__content-main
+    display: flex
+    justify-content: space-between
+    padding: 0 30px
+
+  .about__content-item
+    display: flex
+    flex-direction: column
+    align-items: center
+    margin-bottom: 0
+
+  .about__content-text
+    order: 1
+
+  .about__content-line
+    order: -1
+    width: 80px
+    height: 80px
+    margin-bottom: 25px
+    font-size: 14px
+    font-weight: 600
+    border-radius: 50%
+    background-color: #b1ffd5
+    &::before
+      display: none
+
+    &::after
+      top: 0
+      left: 0
+      bottom: 0
+      right: 0
+      width: auto
+      height: auto
+      font-weight: 600
+      color: #111111
+      background-color: transparent
+
+  .about__content-item
+    &:first-child
+      .about__content-line
+        &::after
+          display: none
+          content: "90%"
+          top: 29px
+          left: 29px
+
+    &:nth-child(2)
+      .about__content-line
+        &::after
+          display: none
+          content: "75%"
+          top: 29px
+          left: 29px
+
+    &:nth-child(3)
+      .about__content-line
+        &::after
+          display: none
+          content: "30%"
+          top: 29px
+          left: 29px
+
+    &:last-child
+      .about__content-line
+        &::after
+          display: none
+          content: "50%"
+          top: 29px
+          left: 29px

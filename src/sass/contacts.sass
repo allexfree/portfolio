@@ -15,7 +15,7 @@
   position: relative
   display: flex
   align-self: center
-  margin-bottom: 60px
+  //margin-bottom: 60px
   font-size: 24px
   font-weight: 600
   line-height: 24px
@@ -30,6 +30,20 @@
     background-image: url("../img/contacts-title-bg.png")
     background-repeat: no-repeat
     background-size: cover
+
+@media (min-device-pixel-ratio: 1.5), (min-resolution: 1.5dppx), (min-resolution: 144dpi)
+  .contacts__title
+    background-image: url("../img/contacts-title-bg@x2.png")
+
+.contacts__text
+  margin-top: 0
+  margin-bottom: 75px
+  align-self: center
+  font-size: 12px
+  letter-spacing: 0.6em
+  color: #111111
+  text-align: center
+  text-transform: uppercase
 
 .contacts__info
   display: flex
@@ -124,7 +138,33 @@
   border-radius: 20px
   background-color: transparent
   transition: all 0.3s
+  cursor: pointer
   box-sizing: border-box
   &:hover,
   &:focus
     background-color: #9dffcb
+
+@media (min-width: 480px)
+  .contacts__info,
+  .contacts__form
+    width: 450px
+
+  .contacts__info-text,
+  .contacts__info-link
+    font-size: 16px
+
+@media (min-width: 750px)
+  .contacts__content
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+  .contacts__info,
+  .contacts__form
+    width: 290px
+
+  .contacts__info
+    min-height: 250px
+    justify-content: center
+    margin-right: 50px
+    margin-bottom: 0

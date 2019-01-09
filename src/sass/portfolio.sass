@@ -16,7 +16,7 @@
   position: relative
   display: flex
   align-self: center
-  margin-bottom: 75px
+  //margin-bottom: 75px
   font-size: 24px
   font-weight: 600
   line-height: 24px
@@ -32,6 +32,19 @@
     background-repeat: no-repeat
     background-size: cover
 
+@media (min-device-pixel-ratio: 1.5), (min-resolution: 1.5dppx), (min-resolution: 144dpi)
+  .portfolio__title
+    background-image: url("../img/portfolio-title-bg@x2.png")
+
+.portfolio__text
+  margin-top: 0
+  margin-bottom: 75px
+  align-self: center
+  font-size: 12px
+  letter-spacing: 0.6em
+  color: #111111
+  text-transform: uppercase
+
 .portfolio__slider
   position: relative
 
@@ -42,6 +55,13 @@
   padding: 15px
   display: none
   box-sizing: border-box
+
+@keyframes opa
+  0%
+    opacity: 0
+
+  100%
+    opacity: 1
 
 .portfolio__slide
   position: relative
@@ -56,6 +76,7 @@
       width: 100%
       height: 100%
       background-color: rgba(0, 0, 0, 0.5)
+      animation: opa 0.2s ease-in-out
 
 .portfolio__slide-link
   display: block
@@ -92,6 +113,10 @@
     cursor: pointer
     box-sizing: border-box
 
+.portfolio__arrows-previous,
+.portfolio__arrows-next
+  display: none
+
 .portfolio__link
   display: flex
   justify-content: center
@@ -112,3 +137,58 @@
   &:hover,
   &:focus
     background-color: #9dffcb
+
+@media (min-width: 750px)
+  .portfolio__slider
+    width: 600px
+    align-self: center
+
+  .portfolio__arrows-previous,
+  .portfolio__arrows-next
+    position: absolute
+    top: 55px
+    display: flex
+    width: 35px
+    height: 35px
+    padding: 0
+    border: none
+    border-radius: 50%
+    background-color: #ffffff
+    background-repeat: no-repeat
+    background-size: cover
+    background-size: 40%
+    background-position: center
+    cursor: pointer
+    box-sizing: border-box
+
+  .portfolio__arrows-previous
+    left: -10%
+    background-image: url("../img/arrow-previous.svg")
+    box-shadow: -2px 0px 5px 0 rgba(105, 105, 105, 0.27)
+    &:focus
+      box-shadow: -2px 0px 2px 0 rgba(105, 105, 105, 0.27)
+
+  .portfolio__arrows-next
+    right: -10%
+    background-image: url("../img/arrow-next.svg")
+    box-shadow: 2px 0px 5px 0 rgba(105, 105, 105, 0.27)
+    &:focus
+      box-shadow: 2px 0px 2px 0 rgba(105, 105, 105, 0.27)
+
+@media (min-width: 970px)
+  .portfolio__slider
+    width: 750px
+
+  .portfolio__slide
+    &:hover
+      cursor: pointer
+
+  .portfolio__arrows-previous
+    left: -10%
+    &:hover
+      background-color: #fafafa
+
+  .portfolio__arrows-next
+    right: -10%
+    &:hover
+      background-color: #fafafa
